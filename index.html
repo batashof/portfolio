@@ -79,8 +79,8 @@
     .stats { break-inside:avoid; page-break-inside:avoid; }
     h2.section { break-after:avoid; page-break-after:avoid; }
     .feature .top { break-after:avoid; page-break-after:avoid; }
-    .webnav { display:none !important; }
   }
+  @media print{ .webnav { display:none !important; } }
   @media screen{
     body{ background:#eef2f7; }
     .page{ max-width:900px; margin:14px auto; background:#fff; padding:26px 30px; border-radius:12px; box-shadow:0 6px 28px rgba(15,23,42,.10); }
@@ -118,7 +118,7 @@
     </div>
   </div>
 
-  <p class="intro">Frontend engineer with 8 years in React and TypeScript. I take features from an empty file to production and I am comfortable owning the whole frontend of a product on my own. A short walk through what I have built and how I work.</p>
+  <p class="intro">Frontend engineer with 8 years in React and TypeScript. I take features from an empty file to production and I am comfortable owning the whole frontend of a product inside a small team. A short walk through what I have built and how I work.</p>
 
   <h2 class="section">Featured Project</h2>
   <div class="feature">
@@ -127,11 +127,11 @@
       <span class="tag">Sole Frontend Engineer · 2025 – Present</span>
     </div>
     <div class="body">
-      <p class="lead">Rideo helps Uber, Bolt and Free Now fleet partners run their business without spreadsheets: driver records and documents, vehicle assignments, fuel cards, payouts and automated VAT/ZUS settlement. I am the only frontend engineer and own the entire web app. It is live in production running a launch partner's day-to-day operations and is now being productized for sale.</p>
+      <p class="lead">Rideo helps Uber, Bolt and Free Now fleet partners run their business without spreadsheets: driver records and documents, vehicle assignments, fuel cards, payouts and automated VAT/ZUS settlement. I'm the sole frontend engineer on a small cross-functional team (backend, design, QA, product owner) and own the whole frontend: architecture, features, UX and deployment. Live in production for a launch partner and now being productized for sale.</p>
 
       <div class="stats">
         <div class="stat"><div class="n">5+ h → under 2 h</div><div class="l">weekly settlement, previously manual in Excel</div></div>
-        <div class="stat"><div class="n">~22k lines</div><div class="l">of hand-written TypeScript / React</div></div>
+        <div class="stat"><div class="n">~22k lines</div><div class="l">of TypeScript / React app code (AI-assisted)</div></div>
         <div class="stat"><div class="n">100+ / 20+</div><div class="l">components and screens shipped</div></div>
         <div class="stat"><div class="n">3 languages</div><div class="l">EN / PL / RU, ~600 keys</div></div>
         <div class="stat"><div class="n">84 + 17</div><div class="l">unit tests and e2e scenarios</div></div>
@@ -142,7 +142,7 @@
         <div class="c">
           <div class="subh">What I built</div>
           <ul class="clean">
-            <li>Architecture from scratch: feature-based structure, Redux Toolkit for client state and TanStack Query for server state.</li>
+            <li>Architecture and build AI-first (Cursor and Claude Code, reviewing every diff): feature-based structure, Redux Toolkit for client state and TanStack Query for server state.</li>
             <li>A fully typed API layer generated with Orval from the backend OpenAPI schema, plus a custom fetch layer (JWT, CSRF, 401 handling, centralized feedback).</li>
             <li>Bulk Excel import flows with client-side parsing and validation, and data-heavy grids tuned for speed.</li>
           </ul>
@@ -152,7 +152,7 @@
           <ul class="clean">
             <li>Turned a 5+ hour manual settlement into a 20-minute-to-2-hour automated flow.</li>
             <li>Localization for three languages with detection and per-request language headers.</li>
-            <li>Quality owned solo: Jest/RTL, two Cypress suites (mocked + live), versioned releases; installable PWA with Clarity and GA4.</li>
+            <li>Quality owned end to end: Jest/RTL, two Cypress suites (mocked + live), versioned releases and frontend deployment; installable PWA with Clarity and GA4.</li>
           </ul>
           <div class="subh" style="margin-top:8px;">Stack</div>
           <div class="tags">
@@ -198,14 +198,14 @@
 
   <h2 class="section">How I Work &amp; Core Skills</h2>
   <div class="card">
-    <p style="margin-top:0;">I ship fast without letting quality slide: typed contracts, a sensible test pyramid, and code review as a habit. I work AI-first in Cursor (agent mode for refactors, scaffolding and tests, kept on rails with project rules), but I read and diff every change and lean on TypeScript and tests to catch anything the model gets wrong — architecture decisions stay human.</p>
+    <p style="margin-top:0;">I ship fast without letting quality slide: typed contracts, a sensible test pyramid, and code review as a habit. I own an area end to end and work closely with backend, design and QA, turning product requirements into shipped, deployed features. I work AI-first in Cursor and Claude Code (agent mode for refactors, scaffolding and tests, kept on rails with project rules), but I read and diff every change and lean on TypeScript and tests to catch what the model gets wrong — architecture decisions stay human.</p>
     <div class="tags" style="margin-top:9px;">
       <span>TypeScript</span><span>React / Next.js</span><span>Angular</span><span>Vue</span>
       <span>Redux Toolkit</span><span>TanStack Query</span><span>Apollo GraphQL</span><span>React Hook Form</span>
       <span>REST / GraphQL</span><span>OpenAPI / Orval</span><span>WebSockets</span>
       <span>Material UI</span><span>Tailwind</span><span>Radix UI</span><span>CSS/SCSS</span>
       <span>Jest / RTL</span><span>Cypress</span><span>Vite / Webpack</span><span>CI/CD</span>
-      <span>Performance</span><span>Accessibility</span><span>i18n</span><span>PWA</span><span>Cursor (AI)</span>
+      <span>Performance</span><span>Accessibility</span><span>i18n</span><span>PWA</span><span>Cursor (AI)</span><span>Claude Code</span>
     </div>
   </div>
 
