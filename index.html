@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Uladzislau Batashou — Portfolio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<style>
+  :root{
+    --ink:#0f172a; --muted:#64748b; --accent:#2563eb; --accent-soft:#eff4ff;
+    --line:#e2e8f0; --bg:#f8fafc; --chip:#f1f5f9;
+  }
+  *{box-sizing:border-box;}
+  @page{ size:A4; margin:12mm 14mm; }
+  html,body{margin:0;padding:0;}
+  body{
+    font:10pt/1.36 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink); background:#fff;
+  }
+  .page{ width:auto; min-height:auto; padding:0; margin:0; }
+  a{color:var(--accent); text-decoration:none;}
+
+  /* Header */
+  .head{ display:flex; justify-content:space-between; align-items:flex-end; border-bottom:2px solid var(--ink); padding-bottom:10px; }
+  .head h1{ font-size:26pt; margin:0; letter-spacing:-.3px; }
+  .head .role{ color:var(--accent); font-weight:600; font-size:12pt; margin-top:2px; }
+  .head .contacts{ text-align:right; font-size:9pt; color:var(--muted); line-height:1.5; }
+  .head .contacts b{ color:var(--ink); }
+
+  .intro{ margin:12px 0 4px; font-size:10.5pt; color:#334155; }
+
+  h2.section{ font-size:9pt; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted);
+    margin:14px 0 7px; font-weight:700; }
+
+  /* Featured project */
+  .feature{ border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+  .feature .top{ background:var(--ink); color:#fff; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; }
+  .feature .top h3{ margin:0; font-size:14pt; }
+  .feature .top .tag{ background:rgba(255,255,255,.14); color:#fff; font-size:8.5pt; padding:3px 9px; border-radius:20px; }
+  .feature .body{ padding:14px 16px; }
+  .lead{ margin:0 0 10px; color:#334155; }
+
+  /* Stats */
+  .stats{ display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 12px; }
+  .stat{ flex:1 1 30%; min-width:140px; background:var(--accent-soft); border:1px solid #dbe6ff; border-radius:10px; padding:9px 11px; }
+  .stat .n{ font-size:13pt; font-weight:700; color:var(--accent); }
+  .stat .l{ font-size:8.6pt; color:#475569; margin-top:1px; }
+
+  .cols{ display:flex; gap:18px; }
+  .cols .c{ flex:1; }
+  ul.clean{ margin:4px 0 0; padding-left:16px; }
+  ul.clean li{ margin:3px 0; }
+  .subh{ font-weight:700; font-size:9.3pt; text-transform:uppercase; letter-spacing:.5px; color:var(--muted); margin:2px 0 4px; }
+
+  /* Tech tags */
+  .tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+  .tags span{ background:var(--chip); border:1px solid var(--line); color:#334155; font-size:8.5pt; padding:3px 8px; border-radius:6px; }
+
+  /* Screenshots grid */
+  .shots{ display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-top:11px; }
+  .shot{ margin:0; border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; }
+  .shot img{ width:100%; height:86px; object-fit:cover; object-position:center top; display:block; }
+  .shot.wide{ grid-column:1 / -1; }
+  .shot.wide img{ height:138px; }
+  .shot figcaption{ font-size:7.6pt; color:var(--muted); padding:3px 8px; border-top:1px solid var(--line); background:var(--bg); }
+
+  /* Experience cards */
+  .exp{ display:flex; flex-direction:column; gap:8px; }
+  .card{ border:1px solid var(--line); border-radius:10px; padding:9px 12px; }
+  .card .row{ display:flex; justify-content:space-between; align-items:baseline; }
+  .card h3{ margin:0; font-size:10.6pt; }
+  .card .when{ color:var(--muted); font-size:8.6pt; white-space:nowrap; }
+  .card p{ margin:4px 0 0; color:#334155; font-size:9.3pt; }
+
+  .footer{ margin-top:22px; padding-top:10px; border-top:1px solid var(--line); color:var(--muted); font-size:9pt;
+    display:flex; justify-content:space-between; }
+
+  @media print{
+    .card, .stat, .shot { break-inside:avoid; page-break-inside:avoid; }
+    .stats { break-inside:avoid; page-break-inside:avoid; }
+    h2.section { break-after:avoid; page-break-after:avoid; }
+    .feature .top { break-after:avoid; page-break-after:avoid; }
+    .webnav { display:none !important; }
+  }
+  @media screen{
+    body{ background:#eef2f7; }
+    .page{ max-width:900px; margin:14px auto; background:#fff; padding:26px 30px; border-radius:12px; box-shadow:0 6px 28px rgba(15,23,42,.10); }
+    .webnav{ max-width:900px; margin:16px auto 0; padding:10px 14px; display:flex; align-items:center; justify-content:space-between; gap:12px; background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow:0 6px 28px rgba(15,23,42,.10); font-size:10.5pt; }
+    .webnav .who{ font-weight:700; color:var(--ink); }
+    .webnav .links{ display:flex; align-items:center; gap:10px; }
+    .webnav a{ color:var(--accent); font-weight:600; }
+    .webnav a.dl{ background:var(--ink); color:#fff; padding:6px 12px; border-radius:8px; }
+    .webnav .sep{ color:var(--line); }
+  }
+</style>
+</head>
+<body>
+
+<div class="webnav">
+  <span class="who">Uladzislau Batashou — Portfolio</span>
+  <span class="links">
+    <a href="index.html">EN</a><span class="sep">·</span><a href="ru.html">RU</a>
+    <a class="dl" href="Portfolio_Batashou_EN.pdf">Portfolio PDF</a>
+    <a class="dl" href="Uladzislau_Batashou_Senior_FE_Engineer_EN.pdf">Resume PDF</a>
+  </span>
+</div>
+
+<div class="page">
+  <div class="head">
+    <div>
+      <h1>Uladzislau Batashou</h1>
+      <div class="role">Senior Frontend Engineer · React / TypeScript</div>
+    </div>
+    <div class="contacts">
+      <div><b>Email</b> batashof@gmail.com</div>
+      <div><b>Phone</b> +375 25 763-06-95</div>
+      <div><b>LinkedIn</b> /in/uladzislau-batashou-23462b155</div>
+      <div>Minsk, Belarus · open to relocation / remote</div>
+    </div>
+  </div>
+
+  <p class="intro">Frontend engineer with 8 years in React and TypeScript. I take features from an empty file to production and I am comfortable owning the whole frontend of a product on my own. A short walk through what I have built and how I work.</p>
+
+  <h2 class="section">Featured Project</h2>
+  <div class="feature">
+    <div class="top">
+      <h3>Rideo — SaaS for ride-hailing fleet partners</h3>
+      <span class="tag">Sole Frontend Engineer · 2025 – Present</span>
+    </div>
+    <div class="body">
+      <p class="lead">Rideo helps Uber, Bolt and Free Now fleet partners run their business without spreadsheets: driver records and documents, vehicle assignments, fuel cards, payouts and automated VAT/ZUS settlement. I am the only frontend engineer and own the entire web app. It is live in production running a launch partner's day-to-day operations and is now being productized for sale.</p>
+
+      <div class="stats">
+        <div class="stat"><div class="n">5+ h → under 2 h</div><div class="l">weekly settlement, previously manual in Excel</div></div>
+        <div class="stat"><div class="n">~22k lines</div><div class="l">of hand-written TypeScript / React</div></div>
+        <div class="stat"><div class="n">100+ / 20+</div><div class="l">components and screens shipped</div></div>
+        <div class="stat"><div class="n">3 languages</div><div class="l">EN / PL / RU, ~600 keys</div></div>
+        <div class="stat"><div class="n">84 + 17</div><div class="l">unit tests and e2e scenarios</div></div>
+        <div class="stat"><div class="n">14 modules</div><div class="l">typed API auto-generated from OpenAPI</div></div>
+      </div>
+
+      <div class="cols">
+        <div class="c">
+          <div class="subh">What I built</div>
+          <ul class="clean">
+            <li>Architecture from scratch: feature-based structure, Redux Toolkit for client state and TanStack Query for server state.</li>
+            <li>A fully typed API layer generated with Orval from the backend OpenAPI schema, plus a custom fetch layer (JWT, CSRF, 401 handling, centralized feedback).</li>
+            <li>Bulk Excel import flows with client-side parsing and validation, and data-heavy grids tuned for speed.</li>
+          </ul>
+        </div>
+        <div class="c">
+          <div class="subh">Highlights</div>
+          <ul class="clean">
+            <li>Turned a 5+ hour manual settlement into a 20-minute-to-2-hour automated flow.</li>
+            <li>Localization for three languages with detection and per-request language headers.</li>
+            <li>Quality owned solo: Jest/RTL, two Cypress suites (mocked + live), versioned releases; installable PWA with Clarity and GA4.</li>
+          </ul>
+          <div class="subh" style="margin-top:8px;">Stack</div>
+          <div class="tags">
+            <span>React 19</span><span>TypeScript</span><span>Redux Toolkit</span><span>TanStack Query</span>
+            <span>MUI + X Data Grid</span><span>React Hook Form</span><span>Orval</span><span>i18next</span>
+            <span>Cypress</span><span>RTL</span><span>PWA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="shots">
+        <figure class="shot wide"><img src="portfolio_assets/report-weekly.png" alt="Weekly settlement report"><figcaption>Weekly settlement report — per-driver balances across Uber, Bolt and Free Now, VAT and rent in one view.</figcaption></figure>
+        <figure class="shot"><img src="portfolio_assets/assign-car.png" alt="Assign a car flow"><figcaption>Two-step flow to assign a car to a driver with dates.</figcaption></figure>
+        <figure class="shot"><img src="portfolio_assets/taxi-services.png" alt="Ride service integrations"><figcaption>Per-service settings for Uber, Bolt and Free Now.</figcaption></figure>
+        <figure class="shot"><img src="portfolio_assets/import-data.png" alt="Data import pipeline"><figcaption>Import pipeline for platform and fuel reports (Excel).</figcaption></figure>
+        <figure class="shot"><img src="portfolio_assets/other-payments.png" alt="Weekly adjustments grid"><figcaption>Weekly grid for manual payments and debt tracking.</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <h2 class="section">Selected Experience</h2>
+  <div class="exp">
+    <div class="card">
+      <div class="row"><h3>LeverX — Frontend Developer</h3><span class="when">Nov 2023 – Dec 2025</span></div>
+      <p>Led frontend architecture in React/Next.js with SSR/ISR and set the team's coding, testing and review practices. Standardized server/client state with TanStack Query and Redux Toolkit, improved performance with code-splitting and caching, and built a reusable MUI/Radix component library with baseline WCAG accessibility.</p>
+      <div class="tags"><span>React</span><span>Next.js</span><span>TypeScript</span><span>TanStack Query</span><span>Radix UI</span><span>Cypress</span></div>
+    </div>
+
+    <div class="card">
+      <div class="row"><h3>EPAM Systems — Frontend Developer</h3><span class="when">Apr 2022 – Oct 2023</span></div>
+      <p>Delivered React features end to end and modernized legacy code with a modular structure and stricter TypeScript. Sped up complex forms and tables with virtualization and memoization, introduced a clear testing pyramid, streamlined CI/CD, and added baseline security controls (CSP, XSS/CSRF).</p>
+      <div class="tags"><span>React</span><span>TypeScript</span><span>Redux Toolkit</span><span>RxJS</span><span>Azure DevOps</span></div>
+    </div>
+
+    <div class="card">
+      <div class="row"><h3>Earlier roles — MrSoft, Freelance, Elinext</h3><span class="when">2018 – 2022</span></div>
+      <p>Built a React + Apollo GraphQL UI for an electronic archives platform (predictable caching, reusable components), an e-commerce shop with catalog, cart/checkout and a 3D room preview, and admin screens integrated with Laravel APIs — where I first grew into clean architecture and shared tooling.</p>
+      <div class="tags"><span>React</span><span>TypeScript</span><span>Apollo GraphQL</span><span>Redux</span><span>SCSS</span><span>Figma</span></div>
+    </div>
+  </div>
+
+  <h2 class="section">How I Work &amp; Core Skills</h2>
+  <div class="card">
+    <p style="margin-top:0;">I ship fast without letting quality slide: typed contracts, a sensible test pyramid, and code review as a habit. I work AI-first in Cursor (agent mode for refactors, scaffolding and tests, kept on rails with project rules), but I read and diff every change and lean on TypeScript and tests to catch anything the model gets wrong — architecture decisions stay human.</p>
+    <div class="tags" style="margin-top:9px;">
+      <span>TypeScript</span><span>React / Next.js</span><span>Angular</span><span>Vue</span>
+      <span>Redux Toolkit</span><span>TanStack Query</span><span>Apollo GraphQL</span><span>React Hook Form</span>
+      <span>REST / GraphQL</span><span>OpenAPI / Orval</span><span>WebSockets</span>
+      <span>Material UI</span><span>Tailwind</span><span>Radix UI</span><span>CSS/SCSS</span>
+      <span>Jest / RTL</span><span>Cypress</span><span>Vite / Webpack</span><span>CI/CD</span>
+      <span>Performance</span><span>Accessibility</span><span>i18n</span><span>PWA</span><span>Cursor (AI)</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Available for Senior Frontend roles</span>
+    <span>batashof@gmail.com · +375 25 763-06-95</span>
+  </div>
+</div>
+
+</body>
+</html>

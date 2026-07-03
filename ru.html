@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Владислав Баташов — Портфолио</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<style>
+  :root{
+    --ink:#0f172a; --muted:#64748b; --accent:#2563eb; --accent-soft:#eff4ff;
+    --line:#e2e8f0; --bg:#f8fafc; --chip:#f1f5f9;
+  }
+  *{box-sizing:border-box;}
+  @page{ size:A4; margin:12mm 14mm; }
+  html,body{margin:0;padding:0;}
+  body{
+    font:10pt/1.36 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink); background:#fff;
+  }
+  .page{ width:auto; min-height:auto; padding:0; margin:0; }
+  a{color:var(--accent); text-decoration:none;}
+
+  .head{ display:flex; justify-content:space-between; align-items:flex-end; border-bottom:2px solid var(--ink); padding-bottom:10px; }
+  .head h1{ font-size:26pt; margin:0; letter-spacing:-.3px; }
+  .head .role{ color:var(--accent); font-weight:600; font-size:12pt; margin-top:2px; }
+  .head .contacts{ text-align:right; font-size:9pt; color:var(--muted); line-height:1.5; }
+  .head .contacts b{ color:var(--ink); }
+
+  .intro{ margin:12px 0 4px; font-size:10.5pt; color:#334155; }
+
+  h2.section{ font-size:9pt; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted);
+    margin:14px 0 7px; font-weight:700; }
+
+  .feature{ border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+  .feature .top{ background:var(--ink); color:#fff; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; }
+  .feature .top h3{ margin:0; font-size:14pt; }
+  .feature .top .tag{ background:rgba(255,255,255,.14); color:#fff; font-size:8.5pt; padding:3px 9px; border-radius:20px; }
+  .feature .body{ padding:14px 16px; }
+  .lead{ margin:0 0 10px; color:#334155; }
+
+  .stats{ display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 12px; }
+  .stat{ flex:1 1 30%; min-width:150px; background:var(--accent-soft); border:1px solid #dbe6ff; border-radius:10px; padding:9px 11px; }
+  .stat .n{ font-size:12.5pt; font-weight:700; color:var(--accent); }
+  .stat .l{ font-size:8.6pt; color:#475569; margin-top:1px; }
+
+  .cols{ display:flex; gap:18px; }
+  .cols .c{ flex:1; }
+  ul.clean{ margin:4px 0 0; padding-left:16px; }
+  ul.clean li{ margin:3px 0; }
+  .subh{ font-weight:700; font-size:9.3pt; text-transform:uppercase; letter-spacing:.5px; color:var(--muted); margin:2px 0 4px; }
+
+  .tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+  .tags span{ background:var(--chip); border:1px solid var(--line); color:#334155; font-size:8.5pt; padding:3px 8px; border-radius:6px; }
+
+  .shots{ display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-top:11px; }
+  .shot{ margin:0; border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; }
+  .shot img{ width:100%; height:86px; object-fit:cover; object-position:center top; display:block; }
+  .shot.wide{ grid-column:1 / -1; }
+  .shot.wide img{ height:138px; }
+  .shot figcaption{ font-size:7.6pt; color:var(--muted); padding:3px 8px; border-top:1px solid var(--line); background:var(--bg); }
+
+  .exp{ display:flex; flex-direction:column; gap:8px; }
+  .card{ border:1px solid var(--line); border-radius:10px; padding:9px 12px; }
+  .card .row{ display:flex; justify-content:space-between; align-items:baseline; }
+  .card h3{ margin:0; font-size:10.6pt; }
+  .card .when{ color:var(--muted); font-size:8.6pt; white-space:nowrap; }
+  .card p{ margin:4px 0 0; color:#334155; font-size:9.3pt; }
+
+  .footer{ margin-top:22px; padding-top:10px; border-top:1px solid var(--line); color:var(--muted); font-size:9pt;
+    display:flex; justify-content:space-between; }
+
+  @media print{
+    .card, .stat, .shot { break-inside:avoid; page-break-inside:avoid; }
+    .stats { break-inside:avoid; page-break-inside:avoid; }
+    h2.section { break-after:avoid; page-break-after:avoid; }
+    .feature .top { break-after:avoid; page-break-after:avoid; }
+    .webnav { display:none !important; }
+  }
+  @media screen{
+    body{ background:#eef2f7; }
+    .page{ max-width:900px; margin:14px auto; background:#fff; padding:26px 30px; border-radius:12px; box-shadow:0 6px 28px rgba(15,23,42,.10); }
+    .webnav{ max-width:900px; margin:16px auto 0; padding:10px 14px; display:flex; align-items:center; justify-content:space-between; gap:12px; background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow:0 6px 28px rgba(15,23,42,.10); font-size:10.5pt; }
+    .webnav .who{ font-weight:700; color:var(--ink); }
+    .webnav .links{ display:flex; align-items:center; gap:10px; }
+    .webnav a{ color:var(--accent); font-weight:600; }
+    .webnav a.dl{ background:var(--ink); color:#fff; padding:6px 12px; border-radius:8px; }
+    .webnav .sep{ color:var(--line); }
+  }
+</style>
+</head>
+<body>
+
+<div class="webnav">
+  <span class="who">Владислав Баташов — Портфолио</span>
+  <span class="links">
+    <a href="index.html">EN</a><span class="sep">·</span><a href="ru.html">RU</a>
+    <a class="dl" href="Portfolio_Batashou_RU.pdf">PDF портфолио</a>
+    <a class="dl" href="Uladzislau_Batashou_Senior_FE_Engineer_EN.pdf">Резюме PDF</a>
+  </span>
+</div>
+
+<div class="page">
+  <div class="head">
+    <div>
+      <h1>Владислав Баташов</h1>
+      <div class="role">Senior Frontend Engineer · React / TypeScript</div>
+    </div>
+    <div class="contacts">
+      <div><b>Почта</b> batashof@gmail.com</div>
+      <div><b>Телефон</b> +375 25 763-06-95</div>
+      <div><b>LinkedIn</b> /in/uladzislau-batashou-23462b155</div>
+      <div>Минск, Беларусь · релокация / удалёнка</div>
+    </div>
+  </div>
+
+  <p class="intro">Фронтенд-разработчик, 8 лет на React и TypeScript. Довожу фичи от пустого файла до прода и спокойно веду фронтенд продукта в одиночку. Ниже — коротко о том, что я сделал и как работаю.</p>
+
+  <h2 class="section">Ключевой проект</h2>
+  <div class="feature">
+    <div class="top">
+      <h3>Rideo — SaaS для автопарков такси-партнёров</h3>
+      <span class="tag">Единственный фронтендер · 2025 – наст. время</span>
+    </div>
+    <div class="body">
+      <p class="lead">Rideo помогает партнёрам Uber, Bolt и Free Now вести бизнес без таблиц: карточки водителей и документы, назначение авто, топливные карты, выплаты и автоматический расчёт VAT/ZUS. Я единственный фронтендер и веду всё веб-приложение целиком. Продукт работает в проде, обслуживает ежедневные операции launch-партнёра и сейчас продуктизируется под продажу.</p>
+
+      <div class="stats">
+        <div class="stat"><div class="n">5+ ч → до 2 ч</div><div class="l">недельный расчёт, раньше вручную в Excel</div></div>
+        <div class="stat"><div class="n">~22k строк</div><div class="l">написанного вручную TypeScript / React</div></div>
+        <div class="stat"><div class="n">100+ / 20+</div><div class="l">компонентов и экранов</div></div>
+        <div class="stat"><div class="n">3 языка</div><div class="l">EN / PL / RU, ~600 ключей</div></div>
+        <div class="stat"><div class="n">84 + 17</div><div class="l">юнит-тестов и e2e-сценариев</div></div>
+        <div class="stat"><div class="n">14 модулей</div><div class="l">типизированный API из OpenAPI (кодген)</div></div>
+      </div>
+
+      <div class="cols">
+        <div class="c">
+          <div class="subh">Что сделал</div>
+          <ul class="clean">
+            <li>Архитектуру с нуля: feature-based структура, Redux Toolkit для клиентского состояния и TanStack Query для серверного.</li>
+            <li>Типизированный слой API через Orval из OpenAPI-схемы бэкенда плюс кастомный fetch-слой (JWT, CSRF, обработка 401, единый фидбэк).</li>
+            <li>Импорт из Excel с клиентским парсингом и валидацией и тяжёлые таблицы, оптимизированные под скорость.</li>
+          </ul>
+        </div>
+        <div class="c">
+          <div class="subh">Результаты</div>
+          <ul class="clean">
+            <li>Свёл недельный расчёт с 5+ часов ручной работы к автоматическому процессу на 20 минут — 2 часа.</li>
+            <li>Локализация на 3 языка с определением языка и заголовком на каждый запрос.</li>
+            <li>Качество веду сам: Jest/RTL, два набора Cypress (mocked + live), версионирование; устанавливаемый PWA с Clarity и GA4.</li>
+          </ul>
+          <div class="subh" style="margin-top:8px;">Стек</div>
+          <div class="tags">
+            <span>React 19</span><span>TypeScript</span><span>Redux Toolkit</span><span>TanStack Query</span>
+            <span>MUI + X Data Grid</span><span>React Hook Form</span><span>Orval</span><span>i18next</span>
+            <span>Cypress</span><span>RTL</span><span>PWA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="shots">
+        <figure class="shot wide"><img src="portfolio_assets/report-weekly.png" alt="Недельный отчёт-расчёт"><figcaption>Недельный расчёт — балансы по каждому водителю в разрезе Uber, Bolt и Free Now, VAT и аренда в одном экране.</figcaption></figure>
+        <figure class="shot"><img src="portfolio_assets/assign-car.png" alt="Назначение авто"><figcaption>Назначение авто водителю в два шага, с датами.</figcaption></figure>
+        <figure class="shot"><img src="portfolio_assets/taxi-services.png" alt="Интеграции сервисов"><figcaption>Настройки по каждому сервису: Uber, Bolt, Free Now.</figcaption></figure>
+        <figure class="shot"><img src="portfolio_assets/import-data.png" alt="Импорт данных"><figcaption>Пайплайн импорта отчётов платформ и топлива (Excel).</figcaption></figure>
+        <figure class="shot"><img src="portfolio_assets/other-payments.png" alt="Недельная сетка выплат"><figcaption>Недельная сетка ручных выплат и учёта долга.</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <h2 class="section">Опыт работы</h2>
+  <div class="exp">
+    <div class="card">
+      <div class="row"><h3>LeverX — Frontend Developer</h3><span class="when">Ноя 2023 – Дек 2025</span></div>
+      <p>Отвечал за фронтенд-архитектуру на React/Next.js с SSR/ISR и задавал в команде практики кода, тестирования и ревью. Стандартизировал серверное/клиентское состояние на TanStack Query и Redux Toolkit, поднял производительность за счёт code-splitting и кеширования, собрал переиспользуемую библиотеку компонентов на MUI/Radix с базовой доступностью (WCAG).</p>
+      <div class="tags"><span>React</span><span>Next.js</span><span>TypeScript</span><span>TanStack Query</span><span>Radix UI</span><span>Cypress</span></div>
+    </div>
+
+    <div class="card">
+      <div class="row"><h3>EPAM Systems — Frontend Developer</h3><span class="when">Апр 2022 – Окт 2023</span></div>
+      <p>Делал фичи на React от и до и модернизировал легаси: модульная структура и более строгий TypeScript. Ускорил сложные формы и таблицы через виртуализацию и мемоизацию, выстроил понятную пирамиду тестов, упорядочил CI/CD и добавил базовые меры безопасности (CSP, XSS/CSRF).</p>
+      <div class="tags"><span>React</span><span>TypeScript</span><span>Redux Toolkit</span><span>RxJS</span><span>Azure DevOps</span></div>
+    </div>
+
+    <div class="card">
+      <div class="row"><h3>Ранние роли — MrSoft, фриланс, Elinext</h3><span class="when">2018 – 2022</span></div>
+      <p>Собрал UI на React + Apollo GraphQL для платформы электронных архивов (предсказуемый кеш, переиспользуемые компоненты), интернет-магазин с каталогом, корзиной/оформлением и 3D-превью комнаты, а также админ-экраны с интеграцией Laravel API — здесь я и вырос в сторону чистой архитектуры и общего инструментария.</p>
+      <div class="tags"><span>React</span><span>TypeScript</span><span>Apollo GraphQL</span><span>Redux</span><span>SCSS</span><span>Figma</span></div>
+    </div>
+  </div>
+
+  <h2 class="section">Как я работаю и ключевые навыки</h2>
+  <div class="card">
+    <p style="margin-top:0;">Выкатываю быстро, но без потери качества: типизированные контракты, разумная пирамида тестов и код-ревью как привычка. Работаю AI-first в Cursor (agent mode для рефакторингов, скаффолдинга и тестов, с project rules), но читаю и диффаю каждое изменение и опираюсь на TypeScript и тесты, чтобы поймать ошибки модели — архитектурные решения остаются за мной.</p>
+    <div class="tags" style="margin-top:9px;">
+      <span>TypeScript</span><span>React / Next.js</span><span>Angular</span><span>Vue</span>
+      <span>Redux Toolkit</span><span>TanStack Query</span><span>Apollo GraphQL</span><span>React Hook Form</span>
+      <span>REST / GraphQL</span><span>OpenAPI / Orval</span><span>WebSockets</span>
+      <span>Material UI</span><span>Tailwind</span><span>Radix UI</span><span>CSS/SCSS</span>
+      <span>Jest / RTL</span><span>Cypress</span><span>Vite / Webpack</span><span>CI/CD</span>
+      <span>Performance</span><span>Accessibility</span><span>i18n</span><span>PWA</span><span>Cursor (AI)</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Открыт к позициям Senior Frontend</span>
+    <span>batashof@gmail.com · +375 25 763-06-95</span>
+  </div>
+</div>
+
+</body>
+</html>
