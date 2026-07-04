@@ -53,9 +53,8 @@
 
   .shots{ display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-top:11px; }
   .shot{ margin:0; border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; }
-  .shot img{ width:100%; height:78px; object-fit:cover; object-position:center top; display:block; }
+  .shot img{ width:100%; height:auto; display:block; }
   .shot.wide{ grid-column:1 / -1; }
-  .shot.wide img{ height:120px; }
   .shot figcaption{ font-size:7.6pt; color:var(--muted); padding:3px 8px; border-top:1px solid var(--line); background:var(--bg); }
 
   .exp{ display:flex; flex-direction:column; gap:8px; }
