@@ -174,6 +174,23 @@
 </div>
 
 <div class="page">
+  <h2 class="section" id="jobradar">Personal Project</h2>
+  <div class="card" style="padding:14px 16px;">
+    <div class="row" style="align-items:baseline;">
+      <h3 style="font-size:12.5pt;">JobRadar — full-stack job-search radar</h3>
+      <span class="when">Solo side project · 2026 · <a href="https://job-radar-web-phi.vercel.app">live</a></span>
+    </div>
+    <p style="margin:6px 0 8px; color:#334155;">A personal full-stack project I built end to end to make my own job hunt less tedious. Background workers aggregate vacancies from 6+ free sources (Telegram channels, RemoteOK, WeWorkRemotely, Remotive, Jobicy, Working Nomads), deduplicate them into a filterable full-text feed, and a drag-and-drop kanban tracks each application through the funnel. On top sits an AI layer — resume ↔ vacancy matching, on-demand vacancy briefs and cover letters, and a text-chat mock-interview coach with a written feedback report. A Next.js frontend and a separate NestJS API, PostgreSQL, Redis-backed queues and cron — all on $0 free-tier infrastructure.</p>
+    <div class="tags">
+      <span>TypeScript</span><span>Next.js</span><span>React</span><span>NestJS</span><span>PostgreSQL</span><span>Drizzle</span><span>BullMQ / Redis</span><span>Tailwind</span><span>dnd-kit</span><span>Telegram MTProto</span><span>LLM (Groq / Gemini)</span><span>Vercel + Render</span>
+    </div>
+    <div class="shots" style="grid-template-columns:1fr 1fr 1fr; margin-top:11px;">
+      <figure class="shot"><img src="portfolio_assets/jobradar-feed.png" alt="Aggregated vacancy feed"><figcaption>Aggregated feed — 6+ sources, per-source filters, full-text search.</figcaption></figure>
+      <figure class="shot"><img src="portfolio_assets/jobradar-board.png" alt="Application kanban"><figcaption>Kanban application tracker across the funnel.</figcaption></figure>
+      <figure class="shot"><img src="portfolio_assets/jobradar-interview.png" alt="AI interview prep"><figcaption>Resume-driven interview prep — AI-generated study plan, questions and a mock interview.</figcaption></figure>
+    </div>
+  </div>
+
   <h2 class="section">Selected Experience</h2>
   <div class="exp">
     <div class="card">
