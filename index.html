@@ -59,6 +59,8 @@
   .shots{ display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-top:11px; }
   .shot{ margin:0; border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; }
   .shot img{ width:100%; height:auto; display:block; }
+  .shot a{ display:block; cursor:zoom-in; }
+  .shot a:hover img{ opacity:.88; }
   .shot.wide{ grid-column:1 / -1; }
   .shot figcaption{ font-size:7.6pt; color:var(--muted); padding:3px 8px; border-top:1px solid var(--line); background:var(--bg); }
 
@@ -184,10 +186,11 @@
     <div class="tags">
       <span>TypeScript</span><span>Next.js</span><span>React</span><span>NestJS</span><span>PostgreSQL</span><span>Drizzle</span><span>BullMQ / Redis</span><span>Tailwind</span><span>dnd-kit</span><span>Telegram MTProto</span><span>LLM (Groq / Gemini)</span><span>Vercel + Render</span>
     </div>
-    <div class="shots" style="grid-template-columns:1fr 1fr 1fr; margin-top:11px;">
-      <figure class="shot"><img src="portfolio_assets/jobradar-feed.png" alt="Aggregated vacancy feed"><figcaption>Aggregated feed — 6+ sources, per-source filters, full-text search.</figcaption></figure>
-      <figure class="shot"><img src="portfolio_assets/jobradar-board.png" alt="Application kanban"><figcaption>Kanban application tracker across the funnel.</figcaption></figure>
-      <figure class="shot"><img src="portfolio_assets/jobradar-interview.png" alt="AI interview prep"><figcaption>Resume-driven interview prep — AI-generated study plan, questions and a mock interview.</figcaption></figure>
+    <div class="shots" style="margin-top:11px;">
+      <figure class="shot"><a href="portfolio_assets/jobradar-feed.png" target="_blank" rel="noopener"><img src="portfolio_assets/jobradar-feed.png" alt="Aggregated vacancy feed"></a><figcaption>Aggregated feed — 6+ sources, per-source filters, full-text search.</figcaption></figure>
+      <figure class="shot"><a href="portfolio_assets/jobradar-apply.png" target="_blank" rel="noopener"><img src="portfolio_assets/jobradar-apply.png" alt="AI apply assistant"></a><figcaption>AI apply assistant — resume ↔ vacancy fit score, generated brief and cover letter.</figcaption></figure>
+      <figure class="shot"><a href="portfolio_assets/jobradar-board.png" target="_blank" rel="noopener"><img src="portfolio_assets/jobradar-board.png" alt="Application kanban"></a><figcaption>Kanban application tracker across the funnel.</figcaption></figure>
+      <figure class="shot"><a href="portfolio_assets/jobradar-interview.png" target="_blank" rel="noopener"><img src="portfolio_assets/jobradar-interview.png" alt="AI interview prep"></a><figcaption>Resume-driven interview prep — AI-generated study plan, questions and a mock interview.</figcaption></figure>
     </div>
   </div>
 
